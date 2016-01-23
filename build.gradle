@@ -10,6 +10,10 @@ apply from: 'config/scripts/idea.gradle'
 group = 'org.robynhan'
 version = '0.0.1-SNAPSHOT'
 
+repositories {
+    jcenter()
+    mavenCentral()
+}
 project.ext {
     guavaVersion = '18.0'
     guiceVersion = '4.0'
