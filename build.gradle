@@ -1,12 +1,13 @@
 apply plugin: 'java'
 apply plugin: 'checkstyle'
+apply plugin: 'application'
 apply plugin: 'findbugs'
 apply plugin: 'jacoco'
 
 apply from: 'config/scripts/coverage.gradle'
 apply from: 'config/scripts/idea.gradle'
 
-group = 'org.robynhan.com'
+group = 'org.robynhan'
 version = '0.0.1-SNAPSHOT'
 
 project.ext {
@@ -68,4 +69,9 @@ check.dependsOn "coverageCheck"
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.5'
+}
+
+task createJavaProject << {
+    sourceSets*.java.srcDirs*.each { it.mkdirs() }
+    sourceSets*.resources.srcDirs*.each { it.mkdirs()}
 }
