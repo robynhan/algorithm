@@ -1,6 +1,6 @@
 package org.robynhan;
 
-public class Solution {
+public class LinkedListSolution {
     public ListNode removeElements(ListNode head, int val) {
         // Write your code here
         ListNode current = head;
