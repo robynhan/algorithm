@@ -10,4 +10,8 @@ public class AddSolution {
         int carry = (a & b) << 1;
         return aplusb(sum, carry);
     }
+
+    public String addBinary(String a, String b) {
+        return Integer.toBinaryString(aplusb(Integer.valueOf(a, 2), Integer.valueOf(b, 2)));
+    }
 }
