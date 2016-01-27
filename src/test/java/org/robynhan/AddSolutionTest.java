@@ -16,6 +16,7 @@ public class AddSolutionTest {
 
     @Test
     public void should_add_binary() {
+        BinaryAddSolution addSolution = new BinaryAddSolution();
         assertThat(addSolution.addBinary("11", "1"), is("100"));
     }
 }
